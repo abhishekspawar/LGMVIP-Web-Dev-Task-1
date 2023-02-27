@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* ------- CSS resest ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+}
+
+/* ------- utilities classes ---------- */
+.text-center {
+    text-align: center;
+}
+
+/* ------- container ---------- */
+.container {
+    background-color: #e3e2df;
+    width: 70%;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+}
+
+/* ------- header ---------- */
+.heading {
+    background-color: #d60746;
+    padding-top: 50px;
+}
+
+.heading h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+.heading h1 {
+    font-size: 4rem;
+    color: whitesmoke;
+}
+
+form {
+    background-color: #d60746;
+    height: 100px;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----- task input area -------*/
+#typingBox {
+    width: 70%;
+    max-width: 600px;
+    padding: 0.6rem 0.7rem;
+    font-size: .9rem;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    color: white;
+    margin: 0 .5rem;
+}
+
+#typingBox:focus::placeholder {
+    color: rgba(49, 49, 49, 0.274);
+}
+
+/*----- task adding button -----*/
+#addTaskBtn {
+    width: 100px;
+    height: 36px;
+    padding: 0.5rem 1rem;
+    font-size: .9rem;
+    cursor: pointer;
+    background-color: #e3e2df;
+    /* outline: none; */
+    border: none;
+    border-radius: 7px;
+    margin-right:.5rem;
+    
+}
+
+/*----- tasks list area ------*/
+.mainList {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid #d60746;
+    border-radius: 10px;
+    padding: 0.8rem 0;
+    padding-top: 2rem;
+
+}
+
+/*----- tasks list area title ------*/
+.mainList>p {
+    background-color: #e3e2df;
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    padding: 0 10px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+/*----- list item wrapper ------*/
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    transition: 2s all ease;
+}
+
+/*------ task  -------*/
+.wrapper>input {
+    background-color: transparent;
+    outline: none;
+    font-family: 'Poppins', sans-serif;;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 78%;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
+    margin-left: .5rem;
+    border: 3px solid transparent;
+    transition: .5s all ease;
+}
+
+/*------ icons wrapper ------*/
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .5rem;
+    min-width: 120px;
+}
+
+/*----- edit button -------*/
+.icons>img {
+    padding: 3px;
+    height: 30px;
+    margin-left: .4rem;
+    cursor: pointer;
+}
+.wrapper .borderbox {
+    border: 3px solid #d60746;
+    color: black;
+    background-color: whitesmoke;
+}
+
+/*-----delete button ------*/
+
+.icons .dltBtn {
+    height: 28px;
+}
+
+/*----- task status button ------*/
+
+.icons>.okBtn {
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icons>.okBtn .circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: -1px;
+    transition: .7s all ease;   
+}
+
+/*------- media query -------*/
+
+@media only screen and (max-width:900px) {
+    .container {
+        width: 100%;
+    }
+    .mainList{
+        width: 90%;
+    } 
+}
