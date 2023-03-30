@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* ------- CSS resest ---------- */
@@ -55,7 +54,7 @@ form {
 }
 
 /*----- task input area -------*/
-#typingBox {
+#taskInputBox {
     width: 70%;
     max-width: 600px;
     padding: 0.6rem 0.7rem;
@@ -66,7 +65,7 @@ form {
     margin: 0 .5rem;
 }
 
-#typingBox:focus::placeholder {
+#taskInputBox:focus::placeholder {
     color: rgba(49, 49, 49, 0.274);
 }
 
@@ -86,7 +85,7 @@ form {
 }
 
 /*----- tasks list area ------*/
-.mainList {
+#taskListArea {
     position: relative;
     width: 80%;
     margin: 0 auto;
@@ -98,7 +97,7 @@ form {
 }
 
 /*----- tasks list area title ------*/
-.mainList>p {
+#taskListArea>p {
     background-color: #e3e2df;
     color: black;
     font-weight: 700;
@@ -110,7 +109,7 @@ form {
     font-size: 1rem;
 }
 
-/*----- list item wrapper ------*/
+/*----- wrapper div------*/
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -119,7 +118,7 @@ form {
     transition: 2s all ease;
 }
 
-/*------ task  -------*/
+/*------ added task title  styling -------*/
 .wrapper>input {
     background-color: transparent;
     outline: none;
@@ -134,7 +133,7 @@ form {
     transition: .5s all ease;
 }
 
-/*------ icons wrapper ------*/
+/*------ icons div------*/
 .icons {
     display: flex;
     justify-content: center;
@@ -143,8 +142,29 @@ form {
     min-width: 120px;
 }
 
-/*----- edit button -------*/
-.icons>img {
+/*----- task status button ------*/
+
+.icons .taskStatusBtn {
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icons .taskStatusBtn .circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: -1px;
+    transition: .7s all ease;   
+}
+
+/*----- task title editing button -------*/
+.icons .taskEditingBtn {
     padding: 3px;
     height: 30px;
     margin-left: .4rem;
@@ -158,29 +178,8 @@ form {
 
 /*-----delete button ------*/
 
-.icons .dltBtn {
+.icons .taskDeletionBtn {
     height: 28px;
-}
-
-/*----- task status button ------*/
-
-.icons>.okBtn {
-    width: 40px;
-    height: 15px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.icons>.okBtn .circle {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: white;
-    margin-left: -1px;
-    transition: .7s all ease;   
 }
 
 /*------- media query -------*/
@@ -189,7 +188,7 @@ form {
     .container {
         width: 100%;
     }
-    .mainList{
+    #taskListArea{
         width: 90%;
     } 
 }
