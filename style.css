@@ -170,7 +170,7 @@ form {
     margin-left: .4rem;
     cursor: pointer;
 }
-.icons .taskDeletionBtn {
+.icons>.taskDeletionBtn {
     height: 28px;
 }
 /* task title editing state  */
