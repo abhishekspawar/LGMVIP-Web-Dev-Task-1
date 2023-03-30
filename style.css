@@ -144,7 +144,7 @@ form {
 
 /*----- task status button ------*/
 
-.icons .taskStatusBtn {
+.icons>.taskStatusBtn {
     width: 40px;
     height: 15px;
     border-radius: 10px;
@@ -154,7 +154,7 @@ form {
     cursor: pointer;
 }
 
-.icons .taskStatusBtn .circle {
+.icons>.taskStatusBtn .circle {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -163,24 +163,23 @@ form {
     transition: .7s all ease;   
 }
 
-/*----- task title editing button -------*/
-.icons .taskEditingBtn {
+/*----- task title editing button and task deletion button -------*/
+.icons>img {
     padding: 3px;
     height: 30px;
     margin-left: .4rem;
     cursor: pointer;
 }
+.icons .taskDeletionBtn {
+    height: 28px;
+}
+/* task title editing state  */
 .wrapper .borderbox {
     border: 3px solid #d60746;
     color: black;
     background-color: whitesmoke;
 }
 
-/*-----delete button ------*/
-
-.icons .taskDeletionBtn {
-    height: 28px;
-}
 
 /*------- media query -------*/
 
