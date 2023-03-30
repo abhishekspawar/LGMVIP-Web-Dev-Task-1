@@ -1,7 +1,6 @@
 const taskInputBox = document.getElementById('taskInputBox');
 const addTaskBtn = document.getElementById('addTaskBtn');
 
-
 taskInputBox.addEventListener('input', btnDisableToggler)
 taskInputBox.addEventListener('focus', function () {
     this.style.backgroundColor = 'white';
@@ -9,10 +8,8 @@ taskInputBox.addEventListener('focus', function () {
     this.style.color = 'black';
     this.style.border = '3px solid #d60746'
 })
-taskInputBox.addEventListener('blur', function () {
-    this.style.backgroundColor = 'white';
-})
 
+//if task available in task input box then activates addTask button otherwise disables it.
 function btnDisableToggler() {
     if (taskInputBox.value.length == 0) {
         addTaskBtn.setAttribute('disabled', '')
@@ -26,7 +23,6 @@ function btnDisableToggler() {
     }
 }
 
-//btnDisableToggler() //if task available in input task area then activates addTask button otherwise disables it
 window.onload = function(){
     taskInputBox.focus();
     btnDisableToggler();
